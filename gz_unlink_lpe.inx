@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>ОТСОЕДИНИТЬ КЛОНЫ ПУТЕЙ</_name>
+    <id>filter.illustrator.unlink.lpe</id>
+    <dependency type="executable" location="extensions">gz_unlink_lpe.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_unlink_lpe.py</command>
+    </script>
+</inkscape-extension>

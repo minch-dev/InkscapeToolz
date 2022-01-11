@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Установить свойство</_name>
+    <id>filter.illustrator.change.attribute</id>
+    <dependency type="executable" location="extensions">gz_change_attribute.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<param name="changeattributename" type="string" _gui-text="attribute name" appearance="minimal"></param>
+	<param name="changeattributevalue" type="string" _gui-text="attribute value" appearance="minimal"></param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_change_attribute.py</command>
+    </script>
+</inkscape-extension>

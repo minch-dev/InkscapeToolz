@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>SVG CUTTER</_name>
+    <id>filter.inkscape.output.cutitoff</id>
+    <dependency type="executable" location="extensions">gz_cutitoff_output.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОРЕЗАТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_cutitoff_output.py</command>
+    </script>
+</inkscape-extension>
+
+<!--?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>SVG CUTTER</_name>
+    <id>org.inkscape.output.svg_svg</id>
+    <dependency type="executable" location="extensions">gz_cutitoff_output.py</dependency>
+    <output>
+        <extension>.svg</extension>
+        <mimetype>image/svg+xml</mimetype>
+        <_filetypename>_CUT ME IN PIECES_(*.svg)</_filetypename>
+        <_filetypetooltip>Cutting multipage SVG to individual files</_filetypetooltip>
+    </output>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_cutitoff_output.py</command>
+    </script>
+</inkscape-extension-->

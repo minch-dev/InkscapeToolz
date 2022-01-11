@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>СМЕНИТЬ CLASS</_name>
+    <id>filter.illustrator.change.class</id>
+    <dependency type="executable" location="extensions">gz_change_class.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+	<param name="newclass" type="string" _gui-text="Enter class string" appearance="minimal"></param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_change_class.py</command>
+    </script>
+</inkscape-extension>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>удалить стили с use</_name>
+    <id>filter.illustrator.fix.use_style</id>
+    <dependency type="executable" location="extensions">gz_fix_use.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_fix_use.py</command>
+    </script>
+</inkscape-extension>

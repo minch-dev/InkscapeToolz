@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>СМЕНИТЬ STYLE</_name>
+    <id>filter.illustrator.remove.style</id>
+    <dependency type="executable" location="extensions">gz_change_style.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+	<param name="newstyle"  type="string"  _gui-text="style string" appearance="minimal"></param>
+    <param name="recursive" type="boolean" _gui-text="recursive" appearance="minimal">False</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_change_style.py</command>
+    </script>
+</inkscape-extension>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Палитру в плоские цвета</_name>
+    <id>filter.inkscape.swatch.tocolor</id>
+    <dependency type="executable" location="extensions">gz_swatch_to_color.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПРЕОБРАЗОВАТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_swatch_to_color.py</command>
+    </script>
+</inkscape-extension>

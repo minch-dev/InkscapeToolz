@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>СМЕНИТЬ ID</_name>
+    <id>filter.illustrator.change.id</id>
+    <dependency type="executable" location="extensions">gz_change_id.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+	<param name="newid" type="string" _gui-text="Enter a new id" appearance="minimal"></param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_change_id.py</command>
+    </script>
+</inkscape-extension>

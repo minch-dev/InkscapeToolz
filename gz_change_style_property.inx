@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Изменить параметр стиля</_name>
+    <id>filter.inkscape.change.styleproperty</id>
+    <dependency type="executable" location="extensions">gz_change_style_property.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+	<param name="style_prop" type="string" _gui-text="property to change" appearance="minimal"></param>
+	<param name="prop_value" type="string" _gui-text="property value" appearance="minimal"></param>
+	<param name="recursive" type="boolean" _gui-text="recursive" appearance="minimal">False</param>
+	<param name="object_type" type="optiongroup" _gui-text="Object type">
+		<option value="0">Any</option>
+		<option value="10">Path</option>
+		<option value="11">Open path only</option>
+		<option value="12">Closed path only</option>
+	</param>
+	
+	
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="_ПОПРАВИТЬ"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">gz_change_style_property.py</command>
+    </script>
+</inkscape-extension>
